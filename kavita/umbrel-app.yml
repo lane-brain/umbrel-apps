@@ -1,0 +1,21 @@
+manifestVersion: 1
+id: kavita
+category: Media
+name: Kavita
+version: "10.8.4"
+tagline: Capable e-book reader
+description: >-
+  Kavita is an e-book reader
+developer: Kavita
+website: https://www.kavitareader.com/
+dependencies: []
+repo: https://github.com/Kareadita/Kavita 
+support: https://github.com/Kareadita/Kavita/issues
+port: 5000 
+gallery:
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+torOnly: false
+permissions:
+  - STORAGE_DOWNLOADS
