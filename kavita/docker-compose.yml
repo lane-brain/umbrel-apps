@@ -12,9 +12,10 @@ services:
     hostname: "${DEVICE_HOSTNAME}"
     volumes:
       - ${UMBREL_ROOT}/data/storage/kavita:/data
-      - ${APP_DATA_DIR}/config:/kavita/config
+      - ${APP_DATA_DIR}/data/config:/kavita/config
     ports:
-      - "5000:5000"
+      - 5000:5000
+      - 5000:5000/udp
     environment:
       - PUID=1000
       - PGID=1000
