@@ -3,18 +3,18 @@ services:
   app_proxy:
     environment:
       APP_HOST: kavita_server_1 
-      APP_PORT: 5048
+      APP_PORT: 5000
       PROXY_AUTH_ADD: "false"
  
-  web:
+  server:
     image: kizaing/kavita:latest
     restart: on-failure
-    hostname: "${DEVICE_HOSTNAME}"
+    stop_grace_period: 1m
+    ports:
+      - "5000:5000"
     volumes:
       - ${UMBREL_ROOT}/data/storage/kavita:/data
-      - ${APP_DATA_DIR}/data/config:/kavita/config
-    ports:
-      - "5048:5000"
-    environment:
-      - PUID=1000
-      - PGID=1000
+      - ${APP_DATA_DIR}/data/kavita/config:/kavita/config
+        #environment:
+        #  - PUID=1000
+        #  - PGID=1000
