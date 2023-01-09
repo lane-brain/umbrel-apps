@@ -11,7 +11,7 @@ website: https://www.kavitareader.com/
 dependencies: []
 repo: https://github.com/Kareadita/Kavita 
 support: https://github.com/Kareadita/Kavita/issues
-port: 5000 
+port: 5048
 gallery:
 path: ""
 defaultUsername: ""
