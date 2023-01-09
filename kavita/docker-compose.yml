@@ -6,7 +6,7 @@ services:
       APP_PORT: 5048
       PROXY_AUTH_ADD: "false"
  
-  server:
+  web:
     image: kizaing/kavita:latest
     restart: on-failure
     hostname: "${DEVICE_HOSTNAME}"
@@ -14,8 +14,7 @@ services:
       - ${UMBREL_ROOT}/data/storage/kavita:/data
       - ${APP_DATA_DIR}/data/config:/kavita/config
     ports:
-      - 5000:5000
-      - 5000:5000/udp
+      - "5048:5000"
     environment:
       - PUID=1000
       - PGID=1000
